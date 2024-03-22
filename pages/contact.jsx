@@ -1,8 +1,8 @@
 import Layout from "@/components/layouts/landingPage/layout"
-export default function Home() {
+export default function Constact() {
   return (
     <Layout>
-      Halaman Home
+      Halaman Constact
     </Layout>
   );
 }
