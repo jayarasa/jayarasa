@@ -1,8 +1,8 @@
 import Layout from "@/components/layouts/landingPage/layout"
-export default function Home() {
+export default function Menu() {
   return (
     <Layout>
-      Halaman Home
+      Halaman Menu
     </Layout>
   );
 }
