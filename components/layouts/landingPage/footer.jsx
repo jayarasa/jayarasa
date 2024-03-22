@@ -18,7 +18,7 @@ function Footer() {
           </div>
           <div className='basis-1/2'>
             <h3 className='text-center font-bold mb-2'>Contact us</h3>
-            <p className='text-xs break-keep text-[0.61rem] font-bold mb-1'>Jayarasafoodinternasional88@gmail.com</p>
+            <p className='text-xs break-keep text-[9px] font-bold mb-1'>Jayarasafoodinternasional88@gmail.com</p>
             <p><FaWhatsapp style={{display:"inline"}}/> (+62) 812-8889-3333</p>
             <div className='flex '>
               <img src="/halal.png" alt="logo halal" width={90}/>
