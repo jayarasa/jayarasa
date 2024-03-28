@@ -20,7 +20,7 @@ model User{
 
 model LandingPage{
   id          String          @id @default(cuid())
-  heding      String 
+  heading      String 
   paragraf    String 
   image       String
   createdAt   DateTime?       @default(now())

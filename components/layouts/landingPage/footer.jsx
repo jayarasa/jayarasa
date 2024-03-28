@@ -4,7 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 
 function Footer() {
   return (
-    <footer className="border-2 border-double border-black fixed bottom-1">
+    <footer className="border-2 border-double border-black ">
         <p className='text-center mb-5 text-xs'>PT Jayarasa Food Internasional</p>
         <div className="flex  flex-row w-full">
           <div className='basis-1/2'>

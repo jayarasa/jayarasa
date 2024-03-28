@@ -16,14 +16,17 @@ export default function Dashboard() {
         };
         reader.readAsDataURL(e.target.files[0]);
     }
-
+    useEffect(() => {
+      if(data) setDatas(data)
+    }, [data])
+    
 const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(); 
-    for (const [key, value] of new FormData(e.target)) {
-        formData.append(key, value);
-    }
+    formData.append("heading", e.target.heading.value);
+    formData.append("paragraf", e.target.paragraf.value);
     formData.append("id", data?.id);
+    if(imagePrev) formData.append("imagePrev", e.target.imagePrev.files[0]);
     try {
         const response = await fetch('/api/dashboard/landingpage', {
             method: 'PUT',
@@ -35,12 +38,19 @@ const handleSubmit = async (e) => {
         }
 
         const data = await response.json();
-        console.log(data);
+        if(data.status == "ok") {
+            mutate()
+            setIsEdit(false)
+            setImagePrev("")
+        }
+        else{ 
+            throw new Error("Gagal Merubah Data")
+        }
     } catch (error) {
         console.error('Terjadi kesalahan:', error);
     }
 };
-console.log(datas?.paragraf != "" ? datas?.paragraf : data)
+    console.log(data)
   return (
     <LayoutAdmin>
         <div className="max-w-xxl xl:mx-2 rounded overflow-hidden shadow-lg p-5">
@@ -59,11 +69,11 @@ console.log(datas?.paragraf != "" ? datas?.paragraf : data)
                     <div className="flex-1">
                         <div className="mt-4">
                             <label htmlFor="heading" className="block text-gray-700 font-bold mb-2">Heading:</label>
-                            <input disabled={!isEdit} id="heading" name="heading" type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={datas?.heading ? datas?.heading : data?.heding} onChange={(e)=> setDatas((prev)=> ({...prev, heading:e.target.value }))} />
+                            <input disabled={!isEdit} id="heading" name="heading" type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={datas?.heading} onChange={(e)=> setDatas((prev)=> ({...prev, heading:e.target.value }))} />
                         </div>
                         <div className="mt-4">
                             <label htmlFor="paragraf" className="block text-gray-700 font-bold mb-2">Paragraf:</label>
-                            <input disabled={!isEdit} id="paragraf"  name="paragraf" type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={datas?.paragraf != "" ? datas?.paragraf : data?.paragraf} onChange={(e)=> setDatas((prev)=> ({...prev, paragraf:e.target.value }))}/>
+                            <input disabled={!isEdit} id="paragraf"  name="paragraf" type="text" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={datas?.paragraf} onChange={(e)=> setDatas((prev)=> ({...prev, paragraf:e.target.value }))}/>
                         </div>
                     </div>
                 </div>
