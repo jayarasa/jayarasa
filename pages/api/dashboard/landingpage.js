@@ -32,36 +32,60 @@ const get = async function handler(req, res) {
 }
 
 const put = async function handler(req, res) {
-  try {
-    const form = formidable()
-    const [rawFields, files] = await form.parse(req);
-    const fields = {};
-    Object.entries(rawFields).forEach(([key, [value]]) => {
-      try {
-        fields[key] = JSON.parse(value);
-      } catch {
-        fields[key] = value;
-      }
-    });
-    const uploadedFile = files.imagePrev
-    const {data, error} = await supa.storage.from("jayarasa").upload("landingpage050324.jpg", readFileSync(uploadedFile[0].filepath),{upsert: true})
-    if(error) throw new Error(error.message)
-    console.log(fields)
+try {
+  const form = formidable({allowEmptyFiles: true});
+  const [rawFields, files] = await form.parse(req);
+
+  const fields = {};
+  Object.entries(rawFields).forEach(([key, [value]]) => {
+    try {
+      fields[key] = JSON.parse(value);
+    } catch {
+      fields[key] = value;
+    }
+  });
+  console.log(files);
+  let uploadedFile = null;
+  if (files.imagePrev && files.imagePrev.length > 0) {
+    uploadedFile = files.imagePrev[0];
+  }
+  console.log(uploadedFile);
+  if (!uploadedFile) {
     await prisma.landingPage.update({
       where: { id: fields?.id },
-      data:{
-        heding: fields.heading,
+      data: {
+        heading: fields.heading,
         paragraf: fields.paragraf,
-    }})
-    return res.status(200).json({"status": "OK"})        
-  } catch (error) {
-    console.log({error});
-      return res.status(500).json({error})
+      },
+    });
+    return res.status(200).json({ status: "OK" });
+  } else {
+    const currentDate = new Date();
+    const { data, error } = await supa.storage
+      .from("jayarasa")
+      .upload(`landingpage${currentDate.getTime()}.jpg`, readFileSync(uploadedFile.filepath), {
+        upsert: true,
+      });
+    if (error) throw new Error(error.message);
+    await prisma.landingPage.update({
+      where: { id: fields?.id },
+      data: {
+        heading: fields.heading,
+        paragraf: fields.paragraf,
+        image: data?.fullPath,
+      },
+    });
+    return res.status(200).json({ status: "OK" });
   }
+} catch (error) {
+  console.log({ error });
+  return res.status(500).json({ error: error.message });
+}
+
 }
 const post = async function handler(req, res) {
   try {
-    const form = formidable()
+    const form = formidable({allowEmptyFiles: true})
     const [rawFields, files] = await form.parse(req);
     const fields = {};
     Object.entries(rawFields).forEach(([key, [value]]) => {
@@ -76,7 +100,7 @@ const post = async function handler(req, res) {
     if(error) throw new Error(error.message)
     await prisma.landingPage.create({data:{
       image: data?.fullPath,
-      heding: fields.heading,
+      heading: fields.heading,
       paragraf: fields.paragraf
     }})
     return res.status(200).json({"status": "OK"})        

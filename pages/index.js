@@ -5,7 +5,7 @@ export default function Home() {
   console.log(status)
   return (
     <Layout>
-      Halaman Home
+      Halaman Home 
     </Layout>
   );
 }
