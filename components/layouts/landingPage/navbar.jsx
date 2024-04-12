@@ -1,23 +1,43 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from "next/link";
+import { Navbar, Flowbite  } from "flowbite-react";
 
-function Navbar() {
-  const navLinks = [
-    {href: "/contact", judul: "Contact", },
-    {href: "/about", judul: "About us", },
-    {href: "/", img:{src:"/logo.svg", alt:"logo jayarasa"}},
-    {href: "/menu", judul: "Menu", },
-    {href: "/faq", judul: "FAQ", }
-  ]
+
+const customTheme = {
+  navbar:{
+    root: {
+      inner: {
+        base: "mx-auto flex flex-wrap items-center justify-between md:justify-around h-full md:container",
+      }
+    },
+  }
+};
+
+
+function Navbarr() {
+
   return (
-    <nav className="bg-[#BFDBDB] px-8 py-4">
-            <ul className="flex justify-between items-center">
-                {navLinks.map((nl, i)=>(
-                  <li key={i}><Link href={nl.href} className="inline-block">{nl.judul ? nl.judul : <img src={nl?.img?.src} alt={nl.img.slt} width={65}/>}</Link></li>
-                ))}
-            </ul>
-    </nav>
+    <Flowbite theme={{ theme: customTheme }}>
+      <Navbar fluid className='md:h-[10vh] border-2 border-slate-200 fixed top-0 left-0 right-0'>
+        <Navbar.Brand as={Link} href="/">
+          <img src="/logo.svg" className="mr-3 h-10 sm:h-9" alt="Logo Jayarasa" />
+          <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">Jayarasa</span>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className='md:w-[50%] md:flex gap-2 '>
+          <Navbar.Link href="#" active className='text-xl'>
+            Home
+          </Navbar.Link>
+          <Navbar.Link as={Link} href="#" className='text-xl'>
+            About
+          </Navbar.Link>
+          <Navbar.Link href="#" className='text-xl'>Services</Navbar.Link>
+          <Navbar.Link href="#" className='text-xl'>Pricing</Navbar.Link>
+          <Navbar.Link href="#" className='text-xl'>Contact</Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+    </Flowbite>
   )
 }
 
-export default Navbar
+export default Navbarr

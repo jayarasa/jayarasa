@@ -1,33 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { EditorState, convertToRaw } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-class TextEditor extends Component {
-  state = {
-    editorState: EditorState.createEmpty(),
-  }
 
-  onEditorStateChange = (editorState) => {
-    this.setState({
-      editorState,
-    });
+const TextEditor = ({onChange, id}) => {
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+
+  const onEditorStateChange = (editorState) => {
+    setEditorState(editorState);
+    onChange(draftToHtml(convertToRaw(editorState.getCurrentContent())));
   };
 
-  render() {
-    const { editorState } = this.state;
-    return (
-      <div>
-        <Editor
-          editorState={editorState}
-          wrapperClassName="border border-2"
-          editorClassName="demo-editor"
-          onEditorStateChange={this.onEditorStateChange}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <Editor
+        id
+        editorState={editorState}
+        wrapperClassName="border border-2 demo-editor"
+        editorClassName="demo-editor"
+        onEditorStateChange={onEditorStateChange}
+        required
+        toolbar={{
+          options: ['inline', 'blockType', 'list', 'textAlign', 'remove', 'history'],
+        }}
+      />
+    </div>
+  );
+};
 
-export default TextEditor
+export default TextEditor;
