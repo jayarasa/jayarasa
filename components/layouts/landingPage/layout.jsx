@@ -2,12 +2,12 @@ import Navbar from "./navbar"
 import Footer from "./footer"
 export default function Layout({children}) {
   return (
-      <div className="mx-auto max-w-screen-sm relative">
+      <>
         <Navbar/>
-          <div className="min-h-[60vh]">
+          <div className="min-h-[100vh] mt-16 md:mt-20 2xl:mt-24">
             {children}
           </div>
         <Footer/>
-      </div>
+      </>
   );
 }
