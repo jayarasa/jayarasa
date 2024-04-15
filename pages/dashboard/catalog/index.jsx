@@ -7,7 +7,7 @@ import Link from "next/link";
 import useFetchAPI from "@/hooks/useFecthApi";
 import Image from "next/image";
 import { Flowbite } from "flowbite-react";
-
+import { MdDelete, MdEdit, MdRemoveRedEye  } from "react-icons/md";
 
 const customTheme = {
   card: {
@@ -49,7 +49,7 @@ export default function Catalog() {
               <Flowbite theme={{ theme: customTheme }}>
                 <Card
                     key={katalog.id}
-                    className="w-[80vw] md:w-[40vw] lg:w-[20vw] p-6"
+                    className="w-[80vw] md:w-[40vw] lg:w-[20vw] xl:w-[18vw] p-6"
                     imgAlt="Gambar Kue"
                     renderImage={() => (
                       <div className="w-full h-[30vh] border-[1px] relative mb-4">
@@ -76,12 +76,18 @@ export default function Catalog() {
                         <div className="text-justify " dangerouslySetInnerHTML={{ __html: katalog.deskripsi }} />
                       </div>
                     </div>
-                    <div className="flex justify-around gap-2 mb-2">
-                      <button className="w-full boeder border-2 border-rose-500 hover:border-rose-700 hover:text-rose-700 text-rose-500 font-bold py-2 px-4 rounded" onClick={()=>setModalDelete(katalog.id)} >H</button>
-                      <button className="w-full bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"  >E</button>
+                    <div className="flex justify-around gap-2 mb-2 mt-2">
+                      <button className="w-full boeder border-2 border-rose-500 hover:border-rose-700 hover:text-rose-700 text-rose-500 font-bold py-2 px-4 rounded" onClick={()=>setModalDelete(katalog.id)} >
+                        <MdDelete className="m-auto h-5 w-5"/>
+                      </button>
+                      <button className="w-full bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"  >
+                        <MdEdit className="m-auto h-5 w-5"/>
+                      </button>
                     </div>
                     <Link href={`/dashboard/catalog/${katalog?.id}`}>
-                     <button className="w-full bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"  >D</button>
+                     <button className="w-full bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded"  >
+                       <MdRemoveRedEye className="m-auto h-5 w-5"/>
+                     </button>
                     </Link>
                 </Card>
               </Flowbite>
