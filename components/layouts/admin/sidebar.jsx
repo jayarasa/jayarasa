@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { RiPagesLine } from "react-icons/ri";
+import { IoIosLogOut  } from "react-icons/io";
 import { GrCatalog } from "react-icons/gr";
 import Link from 'next/link';
 
@@ -20,7 +20,7 @@ function Sidebar() {
             <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
             <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
                 <ul className="space-y-2 font-medium mt-6">
-                    <li>
+                    {/* <li>
                         <button onClick={()=> setHideDropdown((prev)=> !prev)} id="dropdownDefaultButton" type="button" className="flex items-center w-full px-3 py-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" aria-controls="dropdown" data-collapse-toggle="dropdown">
                             <RiPagesLine />
                             <span className="flex-1 ms-4 text-left rtl:text-right whitespace-nowrap">Pages</span>
@@ -36,12 +36,16 @@ function Sidebar() {
                                 <Link href="#" className="flex items-center w-full px-3 py-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">FAQ</Link>
                             </li>
                         </ul>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/dashboard/catalog" className="flex items-center px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                             <GrCatalog />
                             <span className="flex-1 ms-4 whitespace-nowrap">Katalog</span>
                         </Link>
+                    </li>
+                    <li className="flex items-center px-3 py-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <IoIosLogOut className='font-bold' style={{fontWeight: 900}}/>
+                        <span className="flex-1 ms-4 whitespace-nowrap">Logout</span>
                     </li>
 
                 </ul>

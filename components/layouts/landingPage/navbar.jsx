@@ -31,7 +31,7 @@ function Navbarr() {
             Home
           </Navbar.Link>
           <Navbar.Link active={router?.pathname == "menu"} href="/menu" className='text-xl'>
-            Manu
+            Menu
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>

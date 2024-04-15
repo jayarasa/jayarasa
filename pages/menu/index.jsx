@@ -18,7 +18,7 @@ export default function Menu() {
   });
   return (
     <Layout>
-          <div className="mt-24 flex flex-wrap gap-4 justify-center">
+          <div className="mt-24 mb-10 flex flex-wrap gap-4 justify-center">
             {data?.data?.map((katalog, i)=>(
               <Flowbite theme={{ theme: customTheme }}>
                 <Card
