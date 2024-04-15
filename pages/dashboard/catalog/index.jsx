@@ -19,6 +19,9 @@ const customTheme = {
 
 export default function Catalog() {
   const [modalDelete, setModalDelete] = useState("")
+  const { data, mutate, isLoading } = useFetchAPI({
+      url: `/api/dashboard/catalog`,
+  });
   const handleDelete = async() => {
     const id = modalDelete
     try {
@@ -28,11 +31,10 @@ export default function Catalog() {
     } catch (error) {
       console.log(error.message)
     }
+    mutate()
     setModalDelete("")
   }
-  const { data, mutate, isLoading } = useFetchAPI({
-      url: `/api/dashboard/catalog`,
-  });
+
   return (
     <>
       <LayoutAdmin>
@@ -47,7 +49,7 @@ export default function Catalog() {
               <Flowbite theme={{ theme: customTheme }}>
                 <Card
                     key={katalog.id}
-                    className="w-[20vw] p-6"
+                    className="w-[80vw] md:w-[40vw] lg:w-[20vw] p-6"
                     imgAlt="Gambar Kue"
                     renderImage={() => (
                       <div className="w-full h-[30vh] border-[1px] relative mb-4">
