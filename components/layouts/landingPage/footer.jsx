@@ -1,12 +1,24 @@
 import React from 'react'
 import { FaInstagram, FaWhatsapp, FaTiktok  } from "react-icons/fa";
 import { MdLocationOn } from "react-icons/md";
+import { Footer } from "flowbite-react";
 
-function Footer() {
-  return (
-    <footer className="border-2 border-double border-black ">
-        <p className='text-center mb-5 text-xs'>PT Jayarasa Food Internasional</p>
-        <div className="flex  flex-row w-full">
+function Footerr() {
+  return ( 
+    <Footer className=" bg-black rounded-b-none rounded-t-md">
+      <div className='w-full text-white flex flex-col md:flex-row-reverse md:justify-between p-4'>
+        <div className='ms-auto flex gap-3 mb-2'>
+          <FaInstagram style={{display:"inline"}}/>
+          <FaTiktok style={{display:"inline"}}/>
+          <FaWhatsapp style={{display:"inline"}}/>
+        </div>
+        <div className='divide-y'>
+          <p className='text-sm'><MdLocationOn style={{display:"inline"}}/> Ruko Boston Blok D No.11, Pik-2, Kelurahan Salembaran, Kecamatan Kosambi, Kabupaten Tangerang Banten</p>
+          <Footer.Copyright href="#" by="Jayarasa™" year={2024} />
+        </div>
+      </div>
+        {/* <p className='text-center mb-5 text-xs'>PT Jayarasa Food Internasional</p>
+        <div className="flex flex-col  md:flex-row w-full">
           <div className='basis-1/2'>
             <h3 className='text-center font-bold mb-2'>Sosial Media</h3>
             <p className='ms-3 mb-1 font-semibold'><FaInstagram style={{display:"inline"}}/>  @JayarasaaIG</p>
@@ -26,9 +38,9 @@ function Footer() {
             </div>
           </div>
         </div>
-        <p className='text-center text-[0.60rem]'>2024 <sup>TM</sup></p>
-    </footer>
+        <p className='text-center text-[0.60rem]'>2024 <sup>TM</sup></p> */}
+    </Footer>
   )
 }
 
-export default Footer
+export default Footerr
