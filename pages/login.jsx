@@ -6,7 +6,6 @@ function Login() {
   const {push} = useRouter();
   const handleSubmit = async(e)=>{
     e.preventDefault();
-    console.log(e.target.email.value); 
     try {
       const res = await signIn("credentials", {
         redirect: false,

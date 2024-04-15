@@ -125,8 +125,13 @@ const destroy = async function handler(req, res) {
   try {
     const id = req.query.id[0]
     const dataKatalog = await prisma.Katalog.findFirst({where:{id}})
-    throw new Error("eror anying")
-
+    const { storageError } = await supa.storage
+      .from('jayarasa')
+      .remove([``]);
+    if (storageError) {
+          throw new Error("eror anying")
+    }
+    await prisma.katalog.delete({where:{id:dataKatalog.id}})
     res.status(200).json({ok:"berhasil"})
   } catch (error) {
     console.log({error});
