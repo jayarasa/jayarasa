@@ -45,7 +45,7 @@ export default function App() {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className=' w-[100%] h-[85vh]'>
+          <div className='h-[85vh]'>
             <img src="/carousel/2.jpg" className='hidden lg:block w-full h-full' />
             <p>assslamualaikum</p>
           </div>
