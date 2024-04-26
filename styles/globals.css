@@ -64,3 +64,56 @@
 .ff{
     font-family: 'Times New Roman', Times, serif;
 }
+
+.transisi:hover button {
+    transform: translateY(-0.6rem);
+    border-bottom: 2px solid;
+}
+
+.bayangan {
+    /* position: absolute; */
+    top: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    filter: blur(7px);
+}
+
+.animate-kanan{
+    animation: fideKanan 1s linear;
+}
+.animate-kiri{
+    animation: fideKiri 1s linear;
+}
+    
+.animate-atas{
+    animation: fideAtas 1s linear;
+}
+    
+@keyframes fideKanan {
+    from {
+        transform: translatex(2rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fideKiri {
+    from {
+        transform: translatex(-2rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+@keyframes fideAtas {
+    from {
+        transform: translatey(2rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
