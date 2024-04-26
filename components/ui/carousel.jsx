@@ -1,16 +1,23 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import { useMediaQuery } from '@mantine/hooks';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-// import './styles.css';
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+const DivCarousel = ({src="1", logo="", judul="", link=""})=>{
+  const matches = useMediaQuery('(min-width: 1024px)');
+  console.log(matches)
+  return (
+        <div className='w-[100%] h-max flex justify-start items-center'>
+          <img src={`/carousel/${!matches ? "mobile/" : ""}${src}.jpg`} className='hidden lg:block' />
+          <div className='absolute'>
+            <p >{judul}</p>
+          </div>
+        </div>
+  )
+}
 
 export default function App() {
   const progressCircle = useRef(null);
@@ -39,16 +46,20 @@ export default function App() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className='w-[100%] h-[85vh] flex justify-start items-center'>
-            <img src="/carousel/1.jpg" className='hidden lg:block' />
-            <p>assslamualaikum</p>
-          </div>
+          <DivCarousel
+            src="1"
+            logo=""
+            judul=""
+            link=""
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <div className='h-[85vh]'>
-            <img src="/carousel/2.jpg" className='hidden lg:block w-full h-full' />
-            <p>assslamualaikum</p>
-          </div>
+          <DivCarousel
+            src="2"
+            logo=""
+            judul=""
+            link=""
+          />
         </SwiperSlide>
       </Swiper>
     </div>
