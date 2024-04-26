@@ -14,7 +14,7 @@ const Wrap = ({children, className=""})=>{
 }
 const OurProducs = () => {
   return ( 
-    <div className=' bg-[#FFFFFF] ff mt-36 lg:mt-20 mb-20'>
+    <div className=' bg-[#FFFFFF] ff mt-36 lg:mt-20 mb-20 animate-atas'>
         <h2 className='font-semibold text-center mb-16 mt-28'>OUR PRODUCTS</h2>
         <div className="grid grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-2 w-[93%] lg:w-[80%] mx-auto lg:h-[80vh]">
             <div className="col-span-2 lg:col-span-1 row-span-1 lg:row-span-2  overflow-hidden relative w-full aspect-square lg:aspect-auto">
