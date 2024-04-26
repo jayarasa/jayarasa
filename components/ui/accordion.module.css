@@ -2,3 +2,7 @@
         transform: rotate(0deg);
         color: blue
 }
+
+.mantine-focus-auto[aria-expanded="true"]  .warna{
+        color: blue
+}

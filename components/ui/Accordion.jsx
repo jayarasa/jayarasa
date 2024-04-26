@@ -8,7 +8,7 @@ const Accordioon = () => {
   const items = data.map((item) => (
     <Accordion.Item key={item.value} value={item.value}>
       <Accordion.Control>
-        <span className='font-bold'>{item.value}</span>
+        <span className='font-bold warna'>{item.value}</span>
       </Accordion.Control>
       <Accordion.Panel>{item.description}</Accordion.Panel>
     </Accordion.Item>
@@ -16,7 +16,7 @@ const Accordioon = () => {
 
   return (
     <Accordion
-      defaultValue="Apples"
+      defaultValue="HOME"
       classNames={{ chevron: classes.chevron }}
       chevron={<FaPlus/>}
     >

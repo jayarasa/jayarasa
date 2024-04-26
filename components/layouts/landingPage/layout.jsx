@@ -15,7 +15,7 @@ export default function Layout({children}) {
             {!matches && 
             <Drawer.Root opened={opened} onClose={close}  withCloseButton={false} size="100%" >
               <Drawer.Overlay />
-              <Drawer.Content style={{ zIndex:"9999",top:"88px"}}>
+              <Drawer.Content style={{ zIndex:"999999",top:"9.5vh"}} className="border-t">
                 <Drawer.Body>
                   <Accordion/>
                 </Drawer.Body>
