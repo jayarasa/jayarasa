@@ -1,7 +1,7 @@
 import Adventage from "@/components/home/Adventage";
 import CompanyProfile from "@/components/home/CompanyProfile";
 import OurProducs from "@/components/home/OurProducs";
-import Resources from "@/components/home/Resources";
+import News from "@/components/home/News";
 import Layout from "@/components/layouts/landingPage/layout"
 import CompCarousel from "@/components/ui/carousel"
 import { useSession } from "next-auth/react";
@@ -16,7 +16,7 @@ export default function Home() {
       <CompanyProfile/>
       <OurProducs/>
       <Adventage/>
-      <Resources/>
+      <News/>
     </Layout>
   );
 }
