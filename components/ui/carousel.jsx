@@ -12,15 +12,15 @@ const DivCarousel = ({src="1", judul="", link="",judulDua=""})=>{
   return (
         <div className='w-[100%] h-max flex justify-start items-center ff'>
           <img src={`/carousel/${!matches ? "mobile/" : ""}${src}.jpg`} className='hidden lg:block object-contain' />
-          <div className='absolute text-white left-40 text-start'>
-            <div className='w-[8vw] -mt-6 mb-6 animasi_satu'>
-              <img src={`/carousel/label/${src}.png`} className='object-contain'/>
+          <div className='absolute text-white left-6 lg:left-40 text-start'>
+            <div className='w-[18vw] lg:w-[8vw] -mt-6 mb-4 lg:mb-6 animasi_satu'>
+              <img src={`/carousel/label/${src}.png`} className='object-contain w-full h-full'/>
             </div>
-            <div className='mb-16 animasi_dua'>
-              <p className='text-3xl font-bold'>{judul}</p>
-              {judulDua && <p className='text-3xl font-bold'>{judulDua}</p>}
+            <div className='mb-4 lg:mb-16 animasi_dua'>
+              <p className='text-sm lg:text-3xl font-bold'>{judul}</p>
+              {judulDua && <p className='text-sm lg:text-3xl font-bold'>{judulDua}</p>}
             </div>
-            <div className='more-carousel flex rounded-full border-2 border-[#fff] items-center gap-4 w-max py-1 px-5 animasi_tiga'>
+            <div className='text-sm lg:text-md more-carousel flex rounded-full border-2 border-[#fff] items-center gap-1 lg:gap-4 w-max py-0 lg:py-1 px-4 lg:px-5 animasi_tiga'>
               <span>More</span>
               <em></em>
             </div>
