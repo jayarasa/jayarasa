@@ -20,9 +20,9 @@ const DivCarousel = ({src="1", judul="", link="",judulDua=""})=>{
               <p className='text-sm lg:text-3xl font-bold'>{judul}</p>
               {judulDua && <p className='text-sm lg:text-3xl font-bold'>{judulDua}</p>}
             </div>
-            <div className='text-sm lg:text-md more-carousel flex rounded-full border-2 border-[#fff] items-center gap-1 lg:gap-4 w-max py-0 lg:py-1 px-4 lg:px-5 animasi_tiga'>
-              <span>More</span>
-              <em></em>
+            <div className={`cursor-pointer text-sm lg:text-md more-carousel flex rounded-full border-4 border-[#fff] items-center gap-1 lg:gap-4 w-max py-0 lg:py-1 px-4 lg:px-5 animasi_tiga ${src==4 ? 'more-bayangan': ''}`}>
+              <span className='font-bold text-2xl'>More</span>
+              <em className=''></em>
             </div>
           </div>
         </div>
@@ -59,43 +59,28 @@ export default function App() {
         <SwiperSlide>
           <DivCarousel
             src="1"
-            judul="Produsen Pengisian Roti Premium"
+            judul="Premium Bakery Filling"
             link=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <DivCarousel
             src="2"
-            judul="Produsen Roti Beku"
+            judul="Frozen Half Baked Pastry"
             link=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <DivCarousel
             src="3"
-            judul="Produsen Pengisian Roti Premium"
+            judul="Premium Bakery Dairy"
             link=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <DivCarousel
             src="4"
-            judul="Produsen Benang Daging Roti Premium"
-            link=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <DivCarousel
-            src="5"
-            judul="Produsen Minyak Roti Premium"
-            link=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <DivCarousel
-            src="6"
-            judul="Logistik Rantai Dingin Terpadu"
-            judulDua="Penyedia solusi"
+            judul=""
             link=""
           />
         </SwiperSlide>

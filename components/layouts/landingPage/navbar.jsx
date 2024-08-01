@@ -18,10 +18,10 @@ function Navbarr({opened, toggle}) {
   const router = useRouter()
   console.log()
   return (
-    <div className='w-[100vw] fixed top-0 right-0 h-[10vh] z-[99999] shadow-md bg-yellow-800'>
+    <div className='w-[100vw] fixed top-0 right-0 h-[12vh] z-[99999] shadow shadow-black'>
       <div className="absolute top-0 left-0 w-[100%] h-16 md:h-10 bg-[url('/image/nav-web-bg.jpg')] lg:bg-[url('/image/nav-bg.jpg')] bg-left-top bg-no-repeat bg-contain md:bg-cover"></div>
       <div className='absolute bottom-0 bg-white w-[100vw] h-[80%] lg:h-[60%] flex justify-between px-8'>
-        <img src="/logo.svg" alt="logo" className=''/>
+        <img src="/logo.png" alt="logo" className='h-[100%] lg:h-[180%] lg:-mt-10'/>
         <div className='my-auto'>
           <div className='lg:hidden felx justify-center items-center'>
             <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" />

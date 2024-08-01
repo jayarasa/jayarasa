@@ -183,3 +183,12 @@
         transform: translateY(0);
     }
 }
+
+.more-bayangan {
+    background-color: rgba(0, 0, 0, 0.5); /* Hitam semi-transparan */
+    color: #fff; /* Teks putih */
+  }
+  .more-bayangan span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  }
+    

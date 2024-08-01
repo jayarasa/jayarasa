@@ -25,13 +25,13 @@ const CompanyProfile = () => {
               <div className="  w-[100vw] lg:w-[50vw] ps-6 lg:ps-36 pe-6 mb-[100px] lg:mb-[200px]" ref={animatedRef}>     
                   <h2 className="ff mb-4">COMPANY PROFILE</h2>
                   <Garis/>
-                  <p className="ff mb-4 text-3xl text-[#1266AA] font-bold">Perusahaan Jayarasa</p>
-                  <p className="text-slate-400 ff">Jayarasa,Kode saham: 300973, adalah perusahaan tercatat berskala besar yang mengintegrasikan R&D, produksi dan penjualan bahan roti dan produk roti beku, dengan produk utamanya meliputi krim, produk buah, saus, coklat, dan bahan roti lainnya sebagai serta makanan roti beku, dan beberapa makanan ringan. Anak perusahaan Jayarasa, Jayarasa Foods, Aokun dan Hao Dao Foods (Meihuang), bergerak dalam bisnis bahan roti, produk roti beku, dan saus roti..</p>
+                  <p className="ff mb-4 text-3xl text-[#1266AA] font-bold">JAYARASA FOOD INTERNATIONAL</p>
+                  <p className="text-slate-500 ff font-semibold text-lg pe-10">JAYARASA FOOD INTERNATIONAL sebagai platform penjualan resmi untuk pasar Indonesia di bawah naungan Ligao. Saat ini, terdapat lebih dari 20 staf layanan penjualan yang bertujuan untuk mengembangkan dan memelihara pasar Indonesia.</p>
               </div>
               <div className={`w-full lg:ms-auto lg:w-[47%] relative ${!matches && "bg-[#E1EDF8] pt-10 pb-16"}`}>
                   {/* {!matches && <div className="bg-[#E1EDF8] w-[100vw] h-[38vh] md:h-[50vh] top-0 rounded-b-0 right-0 absolute z-0 -mt-10"></div>} */}
                   <div className=" mx-auto lg:me-0 z-[9999] overflow-hidden z-99999">
-                    <img src="company.jpg" alt="jayarasa" className={`mx-auto w-[92%] md:w-[96%] lg:w-full h-full hover:scale-110 transition duration-500`} ref={animatedRefKanan}/>
+                    <img src="company.jpg" alt="jayarasa" className={`mx-auto w-[92%] md:w-[96%] lg:w-full hover:scale-110 transition duration-500`} ref={animatedRefKanan}/>
                   </div>
               </div>
             </div>
