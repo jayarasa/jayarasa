@@ -13,9 +13,14 @@ const customTheme = {
   }
 };
 
+const isActive = (pathname)=>{
+  const router = useRouter()
+  const pathnameActive = router.pathname
+  console.log({pathnameActive})
+  return pathnameActive == pathname ? "inline-block text-[#1C6DB8] border-b-4 border-[#1C6DB8] pb-1" : ""
+}
 
 function Navbarr({opened, toggle}) {
-  const router = useRouter()
   console.log()
   return (
     <div className='w-[100vw] fixed top-0 right-0 h-[12vh] z-[99999] shadow shadow-black'>
@@ -27,9 +32,12 @@ function Navbarr({opened, toggle}) {
             <Burger opened={opened} onClick={toggle} aria-label="Toggle navigation" />
           </div>
           <div className='hidden lg:block'>
-            <ul className='flex gap-6 margin mr-20 font-bold '>
-              <li>Home</li>
-              <li>Menu</li>
+            <ul className='flex gap-6 margin mr-20 font-bold text-lg'>
+              <li className={`${isActive("/")}`}><Link href="/">Home</Link></li>
+              <li className={`${isActive("/about")}`}><Link href="/about">About Us</Link></li>
+              <li className={`${isActive("/catalog")}`}><Link href="/catalog">Catalogue</Link></li>
+              <li className={`${isActive("/contact")}`}><Link href="/contact">Contact Me</Link></li>
+              <li className={`${isActive("/article")}`}><Link href="/article">Article</Link></li>
             </ul>
           </div>
 

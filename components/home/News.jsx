@@ -26,11 +26,8 @@ const News = () => {
             <div className='flex lg:flex-row flex-col lg:w-full justify-between mb-10 gap-4'>
                 <h2 className='text-xl'>NEWS & RESOURCES</h2>
                 <ul className='flex gap-[0.30rem] md:gap-6 menus font-bold text-xs md:text-sm lg:text-[1.05rem] '>
-                    <li className={`cursor-pointer relative ${tabSection == 1 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(1)}>Politics information</li>
-                    <li className={`cursor-pointer relative ${tabSection == 2 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(2)}>What's New</li>
-                    <li className={`cursor-pointer relative ${tabSection == 3 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(3)}>Industry News</li>
-                    <li className={`cursor-pointer relative ${tabSection == 4 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(4)}>Press Release</li>
-                    <li className={`cursor-pointer relative ${tabSection == 5 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(5)}>Product Release</li>
+                    <li className={`cursor-pointer relative ${tabSection == 1 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(1)}>What's New</li>
+                    <li className={`cursor-pointer relative ${tabSection == 2 ? "aktif" : ""} hover:text-[#1266aa]`} onClick={()=>setTabSection(2)}>Product Release</li>
                 </ul>
             </div>
             <div>
@@ -40,9 +37,6 @@ const News = () => {
                 <DivNews src="3" paragraf='Xinxianni Strawberry Fruit Filling丨 "Berry" theme series of cakes, diversified, anti-emo!' tahun='2023.09.28'/>
               </div>}
               {tabSection == 2 && <div className='lg:min-h-[35vh] min-h-[42vh]'></div>}
-              {tabSection == 3 && <div className='lg:min-h-[35vh] min-h-[42vh]'></div>}
-              {tabSection == 4 && <div className='lg:min-h-[35vh] min-h-[42vh]'></div>}
-              {tabSection == 5 && <div className='lg:min-h-[35vh] min-h-[42vh]'></div>}
             </div>
         </div>
     </div>

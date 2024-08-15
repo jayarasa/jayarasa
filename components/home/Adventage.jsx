@@ -10,7 +10,7 @@ const ImageDiv= ({classWrap="", clasImage="", no=1, noActive=1, description="", 
             <img src={`/landingpage/logotab/${no == noActive ? "" :"color/"}${no}.png`} className={`${clasImage} m-auto object-cover `} />
           </div>
           <p className='mb-4 text-center text-xs lg:text-base'>{description}</p>
-          {no == noActive && <div class="animate__animated animate__fadeInDown absolute mx-auto right-0  bottom-0 left-0 w-0 h-0 border-solid border-transparent border-[6px] border-t-[#5f5e5e] "></div>}
+          {no == noActive && <div className="animate__animated animate__fadeInDown absolute mx-auto right-0  bottom-0 left-0 w-0 h-0 border-solid border-transparent border-[6px] border-t-[#5f5e5e] "></div>}
         </div>
   )
 }
@@ -48,16 +48,16 @@ const Adventage = () => {
                 <Garis className='mx-auto'/>
             </div>
             <div className='flex gap-1 lg:gap-4 justify-between'>
-                <ImageDiv no={1} noActive={noActive} description="Rantai Lini Produksi Cerdas" onClick={(no)=>setNoActive(no)}/>
-                <ImageDiv no={2} noActive={noActive} description='Rantai Logistik Pendingin' onClick={(no)=>setNoActive(no)}/>
-                <ImageDiv no={3} noActive={noActive} description='Kekuatan Produk' onClick={(no)=>setNoActive(no)}/>
-                <ImageDiv no={4} noActive={noActive} description='pelayanan kami' onClick={(no)=>setNoActive(no)}/>
+                <ImageDiv no={1} noActive={noActive} description="Intelligent Production Line Chain" onClick={(no)=>setNoActive(no)}/>
+                <ImageDiv no={2} noActive={noActive} description='Cold Chain Logistics Chaindingin' onClick={(no)=>setNoActive(no)}/>
+                <ImageDiv no={3} noActive={noActive} description='Product Strength' onClick={(no)=>setNoActive(no)}/>
+                <ImageDiv no={4} noActive={noActive} description='Our Services' onClick={(no)=>setNoActive(no)}/>
             </div>
         </div>
         {noActive == 1 && <TabSection no={1} judul="Intelligent Production Line Chain" description="Introduced the global technology production equipment, including Germany Siemens, Switzerland RONDO, Japan Shikoku, Holland Redmark and other international brands, synchronized with the" />}
-        {noActive == 2 && <TabSection no={2} judul="Rantai Logistik Rantai Dingin" description="Perusahaan sistem rantai dingin pertama yang dibangun sendiri di industri roti beku Tiongkok, dengan 3.000+ kendaraan berdasarkan kontrak, mencakup 31 provinsi, kotamadya dan daerah otonom, 300+ kotamadya " />}
-        {noActive == 3 && <TabSection no={3} judul="Kekuatan Produk" description="Dengan lebih dari 1.000 kategori produk, Ligao Group dapat sepenuhnya memenuhi kebutuhan pembelian dan konsumsi terpadu berbagai jenis pelanggan hilir dengan berbagai produk dan spesifikasi." />}
-        {noActive == 4 && <TabSection no={4} judul="Pelayanan Kami" description="Tata letak nasional yang terdiri dari 1000+ elit pemasaran, bagi pelanggan koperasi untuk menyediakan pengembangan saluran, program penjualan, teknologi produk, layanan purna jual, pengembangan bakat, dan lainnya" />}
+        {noActive == 2 && <TabSection no={2} judul="Cold Chain Logistics Chain" description="Perusahaan sistem rantai dingin pertama yang dibangun sendiri di industri roti beku Tiongkok, dengan 3.000+ kendaraan berdasarkan kontrak, mencakup 31 provinsi, kotamadya dan daerah otonom, 300+ kotamadya " />}
+        {noActive == 3 && <TabSection no={3} judul="Product Strength" description="Dengan lebih dari 1.000 kategori produk, Ligao Group dapat sepenuhnya memenuhi kebutuhan pembelian dan konsumsi terpadu berbagai jenis pelanggan hilir dengan berbagai produk dan spesifikasi." />}
+        {noActive == 4 && <TabSection no={4} judul="Our Services" description="Tata letak nasional yang terdiri dari 1000+ elit pemasaran, bagi pelanggan koperasi untuk menyediakan pengembangan saluran, program penjualan, teknologi produk, layanan purna jual, pengembangan bakat, dan lainnya" />}
     </div>
   )
 }
