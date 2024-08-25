@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const TitleProd =({children})=>{
@@ -18,7 +19,7 @@ const OurProducs = () => {
         <h2 className='font-semibold text-center mb-16 mt-16 md:mt-20 lg:mt-28'>OUR BEST SELLER PRODUCT</h2>
         <div className="grid grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-2 w-[93%] lg:w-[80%] mx-auto lg:h-[80vh]">
             <div className="col-span-2 lg:col-span-1 row-span-1 lg:row-span-2  overflow-hidden relative w-full aspect-square lg:aspect-auto">
-                <img src="/landingpage/menu/1.jpg" className='hover:scale-110 transition duration-500 w-full h-full' />
+                <Image src="/landingpage/menu/1.jpg" width={200} height={200} className='hover:scale-110 transition duration-500 w-full h-full' />
                 <TitleProd>Kue Ketapang</TitleProd>
             </div>
             <Wrap>

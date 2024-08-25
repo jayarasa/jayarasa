@@ -6,7 +6,7 @@ export default function About() {
       <div className="mt-[12vh] mb-28">
         <h2 className="mt-28 mb-10 text-center text-3xl md:text-6xl font-bold">About Jayarasa</h2>
         <div className="w-[96vw] md:w-[80vw] mx-auto">
-          <img src="/about/product.jpeg" className=" w-full md:border-8 md:border-[#8CD3F5]" alt="" />
+          {/* <img src="/about/product.jpeg" className=" w-full md:border-8 md:border-[#8CD3F5]" alt="" /> */}
           <Image
             src="/about/product.jpeg"
             alt="Deskripsi gambar"
