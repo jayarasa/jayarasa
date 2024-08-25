@@ -37,11 +37,18 @@ export default function About() {
           Ligao, Aokun dan Haodao Foods yang berada dibawah naungan LIGAO FOODS INCORPORATED, memproduksi berbagai macam produk bahan panggang, produk frozen siap saji dan juga saus panggang. Di tahun 2020, perusahaan Ini mencapai omset sebanyak RMB 1.81 miliar, dimana tercatat peningkatan sebanyak 14.27% setiap tahun.
           </p>
         </div>
-        <div className="w-full md:w-[55vw] mt-10 md:mt-6">
-          <p className="text-xl text-center md:text-left md:text-2xl w-[80%] md:w-[100%] ms-auto me-auto md:me-0 md:ms-4">
-            Berbagai tempat produksi seperti yang terletak di Zengcheng Guangzhou, Sanshui Fonan, Changxing Zhejiang, dan Weihu Henan dengan total area melebihi 100.000 m2 menjadikannya salah satu perusahaan yang merupakan produsen terbesar dalam negara.
-          </p>
+        <div className="hidden md:block bg-[url('/about/ligao.png')] bg-cover w-[90vw] h-[100vh]">
+          <div className="pt-10 w-full md:w-[55vw] mt-10 md:mt-6">
+            <p className="text-xl text-white text-center md:text-left md:text-2xl w-[80%] md:w-[100%] ms-auto me-auto md:me-0 md:ms-4">
+              Berbagai tempat produksi seperti yang terletak di Zengcheng Guangzhou, Sanshui Fonan, Changxing Zhejiang, dan Weihu Henan dengan total area melebihi 100.000 m2 menjadikannya salah satu perusahaan yang merupakan produsen terbesar dalam negara.
+            </p>
+          </div>
         </div>
+        <div className="block md:hidden pt-10 w-full md:w-[55vw] mt-10 md:mt-6">
+            <p className="text-xl text-center md:text-left md:text-2xl w-[80%] md:w-[100%] ms-auto me-auto md:me-0 md:ms-4">
+              Berbagai tempat produksi seperti yang terletak di Zengcheng Guangzhou, Sanshui Fonan, Changxing Zhejiang, dan Weihu Henan dengan total area melebihi 100.000 m2 menjadikannya salah satu perusahaan yang merupakan produsen terbesar dalam negara.
+            </p>
+          </div>
       </div>
     </Layout>
   );
