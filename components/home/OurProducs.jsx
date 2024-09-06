@@ -15,28 +15,32 @@ const Wrap = ({children, className=""})=>{
 }
 const OurProducs = () => {
   return ( 
-    <div className=' bg-[#FFFFFF] ff mt-8 md:mt-20 lg:mt-20 mb-20 animate-atas'>
+    <div className=' bg-[#FFFFFF] ff mt-20 md:mt-20 lg:mt-20 mb-20 animate-atas'>
         <h2 className='font-semibold text-center mb-16 mt-16 md:mt-20 lg:mt-28'>OUR BEST SELLER PRODUCT</h2>
-        <div className="grid grid-cols-2 lg:grid-cols-3 lg:grid-rows-2 gap-2 w-[93%] lg:w-[80%] mx-auto lg:h-[80vh]">
-            <div className="col-span-2 lg:col-span-1 row-span-1 lg:row-span-2  overflow-hidden relative w-full aspect-square lg:aspect-auto">
-                <Image src="/landingpage/menu/1.jpg" width={200} height={200} className='hover:scale-110 transition duration-500 w-full h-full' />
-                <TitleProd>Kue Ketapang</TitleProd>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-2 w-[93%] lg:w-[80%] mx-auto lg:h-[80vh]">
             <Wrap>
-                <img src="/landingpage/menu/2.jpg" className='hover:scale-110 transition duration-500 w-full h-full' />
-                <TitleProd>Kue Ketapang</TitleProd>
+                <Image src="/landingpage/menu/portugueseEggTartMini.jpeg" width={200} height={200} className='hover:scale-110 transition duration-500 w-full h-full' />
+                <TitleProd>portuguese egg tart mini</TitleProd>
             </Wrap>
             <Wrap>
-                <img src="/landingpage/menu/3.jpg" className='hover:scale-110 transition duration-500 w-full h-full' />
-                <TitleProd>Kue Ketapang</TitleProd>
+                <img src="/landingpage/menu/portugueseEggTartPremium.jpeg" className='hover:scale-110 transition duration-500 w-full h-full' />
+                <TitleProd>Portuguese egg tart premium</TitleProd>
             </Wrap>
             <Wrap>
-                <img src="/landingpage/menu/4.jpg" className='hover:scale-110 transition duration-500 w-full h-full' />
-                <TitleProd>Kue Ketapang</TitleProd>
+                <img src="/landingpage/menu/DonatOriginalWithSugar.jpeg" className='hover:scale-110 transition duration-500 w-full h-full' />
+                <TitleProd>Donat Original (With sugar)</TitleProd>
             </Wrap>
             <Wrap>
-                <img src="/landingpage/menu/5.jpg" className='hover:scale-110 transition duration-500 w-full h-full' />
-                <TitleProd>Kue Ketapang</TitleProd>
+                <img src="/landingpage/menu/donatStrobryWithSugar.jpeg" className='hover:scale-110 transition duration-500 w-full h-full' />
+                <TitleProd>Donat stoberi (With sugar)</TitleProd>
+            </Wrap>
+            <Wrap>
+                <img src="/landingpage/menu/donatBlueBerryWithSugar.jpeg" className='hover:scale-110 transition duration-500 w-full h-full' />
+                <TitleProd>Donat Blueberi (With sugar)</TitleProd>
+            </Wrap>
+            <Wrap>
+                <img src="/landingpage/menu/kulisPortugisPremiumIncludeIsianPortuguFrozen.jpeg" className='hover:scale-110 transition duration-500 w-full h-full' />
+                <TitleProd>Kulit portugis premium include isian portugis (Frozen)</TitleProd>
             </Wrap>
         </div>
     </div>

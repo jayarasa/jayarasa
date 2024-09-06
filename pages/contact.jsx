@@ -24,7 +24,7 @@ export default function Constact() {
                   <Image className="w-full h-full object-cover" src="/contactUs/ig.png" width={100} height={100}/>
                 </div>
                 <a
-                  href="https://www.tiktok.com/@yourusername"
+                  href="https://www.instagram.com/okoonindonesia/?igsh=MTkxOG9paWppbnZlcQ%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-blue-500 hover:underline"
@@ -37,7 +37,7 @@ export default function Constact() {
                 <Image className="w-full h-full object-cover" src="/contactUs/yt.png" width={100} height={100}/>
                 </div>
                 <a
-                  href="https://www.tiktok.com/@yourusername"
+                  href="https://youtube.com/@okoonid?si=hSXMyz4rSOq6is8q"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-blue-500 hover:underline"
@@ -50,7 +50,7 @@ export default function Constact() {
                 <Image className="w-full h-full object-cover" src="/contactUs/tt.png" width={100} height={100}/>
                 </div>
                 <a
-                  href="https://www.tiktok.com/@yourusername"
+                  href="https://www.tiktok.com/@okoonid?_t=8pNO32xDjq0&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-blue-500 hover:underline"
@@ -63,7 +63,7 @@ export default function Constact() {
                   <Image className="w-full h-full object-cover" src="/contactUs/fb.png" width={100} height={100}/>
                 </div>
                 <a
-                  href="https://www.tiktok.com/@yourusername"
+                  href="https://www.facebook.com/share/rxyDHygmd8NUWeHY/?mibextid=qi2Omg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-blue-500 hover:underline"
@@ -76,7 +76,7 @@ export default function Constact() {
                 <Image className="w-full h-full object-cover" src="/contactUs/wa.png" width={100} height={100}/>
                 </div>
                 <a
-                  href="https://www.tiktok.com/@yourusername"
+                  href="https://wa.me/6281288893333"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-lg text-blue-500 hover:underline"

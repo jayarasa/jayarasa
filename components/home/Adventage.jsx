@@ -5,11 +5,11 @@ import { useHover } from '@mantine/hooks';
 
 const ImageDiv= ({classWrap="", clasImage="", no=1, noActive=1, description="", onClick=()=>{}})=>{
   return (
-        <div className={`relative ${classWrap} w-max lg:w-[10vw] flex flex-col justify-items-center`} onClick={()=>onClick(no)}>
+        <div className={`relative ${classWrap} w-[20vw] lg:w-[10vw] flex flex-col justify-items-center`} onClick={()=>onClick(no)}>
           <div className={`border w-[48px] h-[48px] lg:w-[80px] mx-auto  lg:h-[80px] rounded-full flex justify-center ${no == noActive ? "bg-[#1266AA]":""}`}>
             <img src={`/landingpage/logotab/${no == noActive ? "" :"color/"}${no}.png`} className={`${clasImage} m-auto object-cover `} />
           </div>
-          <p className='mb-4 text-center text-xs lg:text-base'>{description}</p>
+          <p className='mb-4 text-center text-xs lg:text-xs'>{description}</p>
           {no == noActive && <div className="animate__animated animate__fadeInDown absolute mx-auto right-0  bottom-0 left-0 w-0 h-0 border-solid border-transparent border-[6px] border-t-[#5f5e5e] "></div>}
         </div>
   )
@@ -17,13 +17,13 @@ const ImageDiv= ({classWrap="", clasImage="", no=1, noActive=1, description="", 
 const TabSection = ({no, judul, description})=>{
   const { hovered, ref } = useHover();
   return (
-        <div className='flex h-max lg:h-[75%] flex-col lg:flex-row bg-white w-[90vw] lg:w-full mx-auto animate__animated animate__fadeIn transition duration-300 shadow-md'>
+        <div className='flex h-max lg:h-[90%] flex-col lg:flex-row bg-white w-[90vw] lg:w-full mx-auto animate__animated animate__fadeIn transition duration-300 shadow-md'>
           <div className="w-full lg:w-2/5 p-2 lg:p-4"> 
             <div className='w-full h-full'>
-              <p className='text-end text-7xl lg:text-9xl font-bold text-[#F4F6F9]'>{`0${no}`}</p>
+              <p className='text-end text-7xl lg:text-8xl font-bold text-[#F4F6F9]'>{`0${no}`}</p>
               <div className='w-[100%] lg:w-[78%] ms-auto'>
-                <h3 className='text-3xl text-[#1266AA] mb-4 xl:mb-10'>{judul}</h3>
-                <p className='mb-8 xl:mb-20'>{description}...</p>
+                <h3 className='text-3xl text-[#1266AA] mb-4 xl:mb-4'>{judul}</h3>
+                <p className='mb-8 xl:mb-10'>{description}...</p>
                 <div className='transisi mb-2 lg:mb-0 w-max lg:aspect-square transition duration-500 relative ' ref={ref}>
                   <button className='bg-[#1266AA] text-white rounded-full px-7 py-2 ff transition duration-500 '>More <span className='font-bold ms-2'>+</span></button>
                  {hovered && <div className='w-[90%] h-[3%] p-1  bayangan bottom-0 rounded-full'></div>}
@@ -41,7 +41,7 @@ const TabSection = ({no, judul, description})=>{
 const Adventage = () => {
   const [noActive, setNoActive] = useState(1)
   return (
-    <div className='bg-[#F6FAFE] h-max lg:h-[93vh] pt-20 ff overflow-hidden'>
+    <div className='bg-[#F6FAFE] h-max lg:h-[93vh] pt-20 ff  z-50'>
         <div className='flex flex-col h-max lg:h-[25%] lg:flex-row gap-4 lg:gap-0 justify-between w-[94%] lg:w-[80%] mx-auto'>
             <div className='mx-auto'>
                 <p className='mb-4'>CORE ADVANTAGE</p>

@@ -21,7 +21,7 @@ const DivNews = ({src=1, tahun="", paragraf=""}) => {
 const News = () => {
   const [tabSection, setTabSection] = useState(1)
   return (
-    <div className='ff pt-16 mb-20' style={{boxShadow: "inset 0 26px 4px 0 #f7f8f9"}}>
+    <div className='ff pt-24 mb-20' style={{boxShadow: "inset 0 26px 4px 0 #f7f8f9"}}>
         <div className='bg-[#fff] w-[95vw] lg:w-[80%] mx-auto '>
             <div className='flex lg:flex-row flex-col lg:w-full justify-between mb-10 gap-4'>
                 <h2 className='text-xl'>NEWS & RESOURCES</h2>
